@@ -29,7 +29,7 @@ my_dir = os.listdir('../meshes/elephant/') # dir is your directory path
 num_files = len(my_dir) - 1
 
 
-for i in range(50):
+for i in range(num_files):
 
     ## initialize blender: rendering set up
     imgRes_x = 500 # recommend > 2000 (UI: Scene > Output > Resolution X)
@@ -53,7 +53,7 @@ for i in range(50):
     # meshPath = '../meshes/spot.ply'
     # meshPath = '../meshes/elephant/elephant00001.obj'
 
-    location = (0.56,0.52,0.56) # (UI: click mesh > Transform > Location)
+    location = (0.56,0.52,0.48) # (UI: click mesh > Transform > Location)
     rotation = (90, 0, 135) # (UI: click mesh > Transform > Rotation)
     scale = (0.5,0.5,0.5) # (UI: click mesh > Transform > Scale)
     # mesh = readPLY(meshPath, location, rotation, scale)
@@ -91,9 +91,9 @@ for i in range(50):
 
     ## set light
     ## Option1: Three Point Light System (recommended)
-    setLight_threePoints(radius=4, height=10, intensity=1700, softness=6, keyLoc='left')
+    setLight_threePoints(radius=4, height=10, intensity=2500, softness=8, keyLoc='left')
     ## Option2: simple sun light
-    # lightAngle = (-15,-34,-155) 
+    # lightAngle = (-15,-34,-155)
     # strength = 2
     # shadowSoftness = 0.1
     # sun = setLight_sun(lightAngle, strength, shadowSoftness)
