@@ -32,9 +32,9 @@ num_files = len(my_dir) - 1
 for i in range(num_files):
 
     ## initialize blender: rendering set up
-    imgRes_x = 500 # recommend > 2000 (UI: Scene > Output > Resolution X)
-    imgRes_y = 500 # recommend > 2000 (UI: Scene > Output > Resolution Y)
-    numSamples = 50 # recommend > 200 for paper images (UI: Scene > Render > Sampling > Render)
+    imgRes_x = 600 # recommend > 2000 (UI: Scene > Output > Resolution X)
+    imgRes_y = 600 # recommend > 2000 (UI: Scene > Output > Resolution Y)
+    numSamples = 60 # recommend > 200 for paper images (UI: Scene > Render > Sampling > Render)
     exposure = 1.5 # exposure of the entire image (UI: Scene > Render > Film > Exposure)
     blenderInit(imgRes_x, imgRes_y, numSamples, exposure)
 
