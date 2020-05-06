@@ -23,19 +23,16 @@ MINIMUM RENDER STEPS:
 7. run "blender --background --python tutorial.py" again to output your final image
 '''
 
-
 # counter the number of files(frames) to render
 my_dir = os.listdir('../meshes/fish/') # dir is your directory path
-num_files = len(my_dir) - 1
+num_files = int(len(my_dir)/2)
 
 
-img_idx = [125]
-
-for i in range(len(img_idx)):
+for i in range(1):
 
     ## initialize blender: rendering set up
-    imgRes_x = 1350 # recommend > 2000 (UI: Scene > Output > Resolution X)
-    imgRes_y = 990 # recommend > 2000 (UI: Scene > Output > Resolution Y)
+    imgRes_x = 1200 # recommend > 2000 (UI: Scene > Output > Resolution X)
+    imgRes_y = 600 # recommend > 2000 (UI: Scene > Output > Resolution Y)
     numSamples = 100 # recommend > 200 for paper images (UI: Scene > Render > Sampling > Render)
     exposure = 1.5 # exposure of the entire image (UI: Scene > Render > Film > Exposure)
     blenderInit(imgRes_x, imgRes_y, numSamples, exposure)
@@ -44,7 +41,6 @@ for i in range(len(img_idx)):
     meshPath = '../meshes/fish/fish'
     outputPath = './results/fish/fish'
     idx = i + 1
-    idx = img_idx[i]
     int_length = len(str(idx))
     for j in range(5-int_length):
         meshPath = meshPath + '0'
@@ -52,13 +48,10 @@ for i in range(len(img_idx)):
     meshPath = meshPath + str(idx) + '.obj'
     outputPath = outputPath + str(idx) + '.png'
 
-    ## read mesh (choose either readPLY or readOBJ)
-    # meshPath = '../meshes/spot.ply'
-    # meshPath = '../meshes/elephant/elephant00001.obj'
 
-    location = (-0.48,0.52,0.2) # (UI: click mesh > Transform > Location)
-    rotation = (80, 0, 105) # (UI: click mesh > Transform > Rotation)
-    scale = (0.27,0.27,0.27) # (UI: click mesh > Transform > Scale)
+    location = (-0.72,0.52,0.3) # (UI: click mesh > Transform > Location)
+    rotation = (80, 0, 80) # (UI: click mesh > Transform > Rotation)
+    scale = (0.25,0.25,0.25) # (UI: click mesh > Transform > Scale)
     # mesh = readPLY(meshPath, location, rotation, scale)
     mesh = readOBJ(meshPath, location, rotation, scale)
 
@@ -113,3 +106,7 @@ for i in range(len(img_idx)):
 
     ## save rendering
     renderImage(outputPath, cam)
+
+
+
+
