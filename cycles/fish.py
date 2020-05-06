@@ -29,7 +29,7 @@ my_dir = os.listdir('../meshes/fish/') # dir is your directory path
 num_files = len(my_dir) - 1
 
 
-img_idx = [180]
+img_idx = [125]
 
 for i in range(len(img_idx)):
 
