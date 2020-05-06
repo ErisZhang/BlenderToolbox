@@ -1,19 +1,19 @@
 import sys
-sys.path.append('/Users/hsuehtil/Dropbox/BlenderToolbox/cycles')
+sys.path.append('/Users/zhangjiayi/Documents/BlenderToolbox/cycles')
 from include import *
 import bpy
 
-outputPath = './results/demo_texture.png'
+outputPath = './results/test_texture.png'
 
 # # init blender
-imgRes_x = 720 
+imgRes_x = 1080 
 imgRes_y = 720 
 numSamples = 50 
 exposure = 1.0
 blenderInit(imgRes_x, imgRes_y, numSamples, exposure)
 
-# read mesh 
-meshPath = '../meshes/spot_UV.obj'
+# read mesh
+meshPath = '../meshes/fish00050Test.obj'
 location = (-0.3, 0.6, -0.04)
 rotation = (90, 0,0)
 scale = (1.5,1.5,1.5)
@@ -31,7 +31,7 @@ subdivision(mesh, level)
 # colorObj(RGBA, H, S, V, Bright, Contrast)
 useless = (0,0,0,1)
 meshColor = colorObj(useless, 0.5, 1.0, 1.0, 0.0, 0.0)
-texturePath = '../meshes/spot_by_keenan.png' 
+texturePath = '../meshes/golden_fish.png' 
 # using relative path gives us weired bug...
 setMat_texture(mesh, texturePath, meshColor)
 
