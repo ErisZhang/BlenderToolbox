@@ -8,7 +8,7 @@ for iter in range(2):
 
     frame_idx = iter + 1
     int_length = len(str(frame_idx))
-    outputPath = './results/spot/spot'
+    outputPath = './results/spot/spotInput'
     for j in range(6-int_length):
         outputPath = outputPath + '0'
     outputPath = outputPath + str(frame_idx) + '.png'
@@ -61,7 +61,7 @@ for iter in range(2):
     for i in range(2):
         # read mesh: bob
         mesh_idx = i + 1
-        meshPath = '../meshes/spot/bob' + str(mesh_idx) + '' + num_suffix
+        meshPath = '../meshes/spot/bob' + str(mesh_idx) + 'Input_' + num_suffix
         # meshPath = '../meshes/spot/bob1000100.obj'
         location = (0.405266, -0.419702, 0)
         rotation = (90,0,104)
@@ -90,7 +90,7 @@ for iter in range(2):
     for i in range(5):
         # read mesh: spot
         mesh_idx = i + 1
-        meshPath = '../meshes/spot/spot' + str(mesh_idx) + '' + num_suffix
+        meshPath = '../meshes/spot/spot' + str(mesh_idx) + 'Input_' + num_suffix
         location = (0.405266, -0.419702, 0)
         rotation = (90,0,104)
         scale = (0.215,0.215,0.215)
