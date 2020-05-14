@@ -1,5 +1,5 @@
 import sys
-sys.path.append('/Users/hsuehtil/Dropbox/BlenderToolbox/cycles')
+sys.path.append('/Users/zhangjiayi/Documents/BlenderToolbox/cycles')
 from include import *
 import bpy
 
@@ -13,7 +13,8 @@ exposure = 1.0
 blenderInit(imgRes_x, imgRes_y, numSamples, exposure)
 
 # read mesh 
-meshPath = '../meshes/frog_paparazzi_l0.obj'
+# meshPath = '../meshes/frog_paparazzi_l0.obj'
+meshPath = '../meshes/barSTVK00050.obj'
 location = (-0.42, -0.28, 0.29)
 rotation = (0, 0,90.1)
 scale = (1,1,1)

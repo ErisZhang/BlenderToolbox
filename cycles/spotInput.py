@@ -65,8 +65,7 @@ for iter in range(2):
         # meshPath = '../meshes/spot/bob1000100.obj'
         location = (0.405266, -0.419702, 0)
         rotation = (90,0,104)
-        scale = (0.283,0.283,0.283)
-        # scale = (0.344,0.344,0.344) # Input
+        scale = (0.344,0.344,0.344) # Input
         # mesh = readPLY(meshPath, location, rotation, scale)
         mesh = readOBJ(meshPath, location, rotation, scale)
 
@@ -93,8 +92,7 @@ for iter in range(2):
         meshPath = '../meshes/spot/spot' + str(mesh_idx) + 'Input_' + num_suffix
         location = (0.405266, -0.419702, 0)
         rotation = (90,0,104)
-        scale = (0.215,0.215,0.215)
-        # scale = (0.344,0.344,0.344) # Input
+        scale = (0.344,0.344,0.344) # Input
         # mesh = readPLY(meshPath, location, rotation, scale)
         mesh = readOBJ(meshPath, location, rotation, scale)
 

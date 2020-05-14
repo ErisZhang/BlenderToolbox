@@ -1,5 +1,5 @@
 import sys
-sys.path.append('/Users/hsuehtil/Dropbox/BlenderToolbox/cycles')
+sys.path.append('/Users/zhangjiayi/Documents/BlenderToolbox/cycles')
 from include import *
 import bpy
 
@@ -13,15 +13,23 @@ exposure = 1.0
 blenderInit(imgRes_x, imgRes_y, numSamples, exposure)
 
 # read mesh 
-meshPath = '../meshes/spot.ply'
+# meshPath = '../meshes/spot.ply'
+meshPath = '../meshes/barSTVK00050.obj'
 location = (-0.3, 0.6, -0.04)
 rotation = (90, 0,0)
 scale = (1.5,1.5,1.5)
-mesh = readPLY(meshPath, location, rotation, scale)
+# mesh = readPLY(meshPath, location, rotation, scale)
+mesh = readOBJ(meshPath, location, rotation, scale)
+
 
 # # set shading
-bpy.ops.object.shade_smooth()
-# bpy.ops.object.shade_flat()
+angle = 10
+edgeNormals(mesh, angle)
+
+
+# # set shading
+# bpy.ops.object.shade_smooth()
+bpy.ops.object.shade_flat()
 
 # # subdivision
 level = 2
